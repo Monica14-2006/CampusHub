@@ -1,0 +1,329 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0 ;
+    padding: 30px 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 38px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+
+}
+h2 {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+#taskInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#addTask {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#taskList {
+    padding: 0;
+    list-style-type: none;
+    width: 400px;
+    margin: 30px auto;
+}
+#taskList li {
+    background-color: white;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+#taskList li:hover,
+#eventList li:hover ,
+#noteList li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+#taskList button {
+    padding: 5px 8px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.completeButton {
+    background-color: #4caf50;
+    color: white;
+}
+.completedButton {
+    background-color: #888;
+    color: white;
+}
+.deleteButton {
+    background-color: #f44336;
+    color: white;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 35px 30px;
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.taskText {
+    flex: 1;
+    text-align: left;
+    transition: 0.2s ease;
+}
+.completeButton:hover {
+    opacity: 0.8;
+}
+.deleteButton:hover {
+    opacity: 0.8;
+}
+#taskList li
+    input[type="checkbox"] {
+     width: 18px;
+     height: 18px;
+     margin-right: 12px;
+     cursor: pointer;
+    }
+#taskList li 
+    input[type="checkbox"] {
+    flex-shrink: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+.nav-links {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 9px 14px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+.nav-links a:hover {
+    color: #4caf50;
+    background-color: #eaf6eb;
+}
+#noteInput {
+    padding: 10px;
+    width: 300px;
+    height: 42px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    box-sizing: content-box;
+    resize: none;
+    vertical-align: middle;
+}
+#addNote {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle;
+}
+#eventInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+#addEvent {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle;
+}
+#eventDate {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+#noteList {
+    list-style-type: none;
+    padding: 0;;
+    width: 400px;
+    margin: 30px auto;
+}
+#eventList li ,
+#noteList li {
+    margin-bottom: 12px;
+    background-color: white;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: 0.2s;
+}
+#eventList {
+    list-style-type: none;
+    padding: 0;;
+    width: 400px;
+    margin: 30px auto;
+}
+#taskInput,
+#addTask,
+#noteInput,
+#addNote,
+#eventInput,
+#addEvent,
+#eventDate {
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+#taskInput:focus,
+#noteInput:focus,
+#eventInput:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+#noteList ,
+#eventList {
+    margin-top: 20px;
+}
+#addTask,
+#addEvent,
+#addNote {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle;
+}
+#addTask:hover ,
+#addNote:hover,
+#addEvent:hover  {
+    opacity: 0.8;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px 5px;
+        box-sizing: border-box;
+    }
+    #taskInput,
+    #noteInput,
+    #eventInput {
+        width: 90%;
+        box-sizing: border-box;
+    }
+    #eventInput,
+    #eventDate,
+    #addEvent {
+    width: 90%;
+    margin: 5px auto;
+    display: block;
+}
+
+    #taskList,
+    #noteList,
+    #eventList {
+        width: 95%;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    #taskList li,
+    #noteList li,
+    #eventList li {
+    flex-wrap: wrap;
+}
+
+#taskList button,
+#noteList button,
+#eventList button {
+    margin-top: 5px;
+}
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+#taskList li,
+#noteList li,
+#eventList li {
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+button {
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: translateY(0);
+}

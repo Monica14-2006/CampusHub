@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CampusHub</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container" id="home">
+        <nav class="navbar">
+          <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#notes">Notes</a>
+            <a href="#events">Events</a>
+        </div>
+        </nav>
+        <h1>CampusHub</h1>
+        <p>Your college life,organised in one place</p>
+        <h2 id="tasks">My Tasks</h2>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <button id="addTask">Add Task</button>
+        <ul id="taskList"></ul>
+        <h2 id="notes">Notes</h2>
+        <textarea id="noteInput" placeholder="Write a note..."></textarea>
+        <button id="addNote">Add Note</button>
+        <ul id="noteList"></ul>
+        <h2 id="events">Events</h2>
+        <input type="text" id="eventInput" placeholder="Enter an event">
+        <input type="date" id="eventDate">
+        <button id="addEvent">Add event</button>
+        <ul id="eventList"></ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
