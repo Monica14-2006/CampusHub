@@ -103,9 +103,6 @@ h2 {
      height: 18px;
      margin-right: 12px;
      cursor: pointer;
-    }
-#taskList li 
-    input[type="checkbox"] {
     flex-shrink: 0;
 }
 .navbar {
@@ -183,7 +180,7 @@ h2 {
 }
 #noteList {
     list-style-type: none;
-    padding: 0;;
+    padding: 0;
     width: 400px;
     margin: 30px auto;
 }
@@ -203,7 +200,7 @@ h2 {
 }
 #eventList {
     list-style-type: none;
-    padding: 0;;
+    padding: 0;
     width: 400px;
     margin: 30px auto;
 }
@@ -306,6 +303,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     font-family: Arial, sans-serif;
+    transition: 0.2s ease;
 }
 #taskList li,
 #noteList li,
@@ -315,10 +313,6 @@ button {
     margin-left: auto;
     margin-right: auto;
 }
-button {
-    transition: 0.2s ease;
-}
-
 button:hover {
     transform: translateY(-2px);
     opacity: 0.9;

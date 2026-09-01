@@ -261,7 +261,7 @@ loadTasks();
     taskText.className="taskText";
     const checkBox=document.createElement("input");
     checkBox.type="checkBox";
-    const completeButton =document.createElement("Button");
+    const completeButton =document.createElement("button");
     completeButton.textContent=" Complete";
     completeButton.className="completeButton";
     if (Number(completed) === 1) {
@@ -343,7 +343,7 @@ checkBox.addEventListener("change", async function() {
         console.error("Error updating task:", error);
     }
 });
-    const deleteButton=document.createElement("Button");
+    const deleteButton=document.createElement("button");
     deleteButton.textContent=" Delete";
     deleteButton.className="deleteButton";
     deleteButton.addEventListener("click", async function() {
