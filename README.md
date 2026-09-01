@@ -1,17 +1,21 @@
-# CampusHub 🎓
+# CampusHub
 
-CampusHub is a full-stack student productivity dashboard designed to help students manage tasks, notes, and events in one place.
+A simple student productivity website for managing tasks, notes and events.
 
-## ✨ Features
+## Features
 
-- 📋 Add, complete, and delete tasks
-- 📝 Create and delete notes
-- 📅 Add and delete events with dates
-- 💾 Persistent data storage using MySQL
-- 🔄 Data remains after refreshing the page
-- 📱 Responsive design for mobile devices
+- Add and delete tasks
+- Mark tasks as completed
+- Add and delete notes
+- Add and delete events
+- Persistent data using MySQL
+- Responsive design
 
-## 🛠️ Technologies Used
+## Screenshot
+
+![CampusHub Screenshot](campushub.png)
+
+## Technologies Used
 
 - HTML
 - CSS
@@ -19,17 +23,3 @@ CampusHub is a full-stack student productivity dashboard designed to help studen
 - Node.js
 - Express.js
 - MySQL
-
-## 📂 Project Structure
-
-```text
-CampusHub/
-├── backend/
-│   ├── server.js
-│   ├── package.json
-│   ├── package-lock.json
-│   └── .gitignore
-├── index.html
-├── script.js
-├── style.css
-└── README.md
