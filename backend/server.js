@@ -222,6 +222,6 @@ app.put("/tasks/:id", function(req, res) {
     );
 });
 // Start the server
-app.listen(PORT, function() {
-    console.log(`CampusHub server is running on http://localhost:${PORT}`);
+app.listen(PORT,"0.0.0.0", function() {
+    console.log(`CampusHub server is running on port ${PORT}`);
 });
