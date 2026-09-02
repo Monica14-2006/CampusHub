@@ -1,4 +1,5 @@
 console.log("JavaScript is connected!");
+const API_URL = "https://campushub-7ql7.onrender.com";
 const addTask=document.getElementById("addTask");
 const taskInput=document.getElementById("taskInput");
 const taskList=document.getElementById("taskList");
@@ -13,7 +14,7 @@ let notes = [];
 
 async function loadNotes() {
     try {
-        const response = await fetch("http://localhost:3000/notes");
+        const response = await fetch(`${API_URL}/notes`);
 
         if (!response.ok) {
             throw new Error("Failed to load notes");
@@ -34,9 +35,9 @@ async function loadNotes() {
             deleteButton.className = "deleteButton";
             deleteButton.addEventListener("click", async function() {
     try {
-        const response = await fetch(`http://localhost:3000/notes/${note.id}`, {
+        const response = await fetch(`${API_URL}/notes/${note.id}`, {
             method: "DELETE"
-        });
+    });
 
         if (!response.ok) {
             throw new Error("Failed to delete note");
@@ -70,7 +71,7 @@ addNote.addEventListener("click", async function() {
     }
 
     try {
-        const response = await fetch("http://localhost:3000/notes", {
+        const response = await fetch(`${API_URL}/notes`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -99,7 +100,7 @@ deleteButton.className = "deleteButton";
 
 deleteButton.addEventListener("click", async function() {
     try {
-        const response = await fetch(`http://localhost:3000/notes/${data.id}`, {
+        const response = await fetch(`${API_URL}/notes/${data.id}`, {
             method: "DELETE"
         });
 
@@ -140,7 +141,7 @@ function createEvent(eventText, date, eventId) {
     deleteButton.addEventListener("click", async function() {
 
         try {
-            const response = await fetch(`http://localhost:3000/events/${eventId}`, {
+            const response = await fetch(`${API_URL}/events/${eventId}`, {
                 method: "DELETE"
             });
 
@@ -163,7 +164,7 @@ function createEvent(eventText, date, eventId) {
 }
 async function loadEvents() {
     try {
-        const response = await fetch("http://localhost:3000/events");
+        const response = await fetch(`${API_URL}/events`);
 
         if (!response.ok) {
             throw new Error("Failed to load events");
@@ -200,7 +201,7 @@ addEvent.addEventListener("click", async function() {
 
     try {
 
-        const response = await fetch("http://localhost:3000/events", {
+        const response = await fetch(`${API_URL}/events`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -234,7 +235,7 @@ let tasks = [];
 
 async function loadTasks() {
     try {
-        const response = await fetch("http://localhost:3000/tasks");
+        const response = await fetch(`${API_URL}/tasks`);
 
         if (!response.ok) {
             throw new Error("Failed to load tasks");
@@ -275,7 +276,7 @@ checkBox.addEventListener("change", async function() {
     const completed = checkBox.checked ? 1 : 0;
 
     try {
-        const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+        const response = await fetch(`${API_URL}/tasks/${taskId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -311,7 +312,7 @@ checkBox.addEventListener("change", async function() {
     const completed = checkBox.checked ? 0 : 1;
 
     try {
-        const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+        const response = await fetch(`${API_URL}/tasks/${taskId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -349,7 +350,7 @@ checkBox.addEventListener("change", async function() {
     deleteButton.addEventListener("click", async function() {
 
     try {
-        const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
+        const response = await fetch(`${API_URL}/tasks/${taskId}`, {
             method: "DELETE"
         });
 
@@ -379,7 +380,7 @@ addTask.addEventListener("click", function() {
         return;
     }
 
-    fetch("http://localhost:3000/tasks", {
+    fetch(`${API_URL}/tasks`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
